@@ -2,7 +2,7 @@
 
 ## Key Maps
    
-   * Basics
+    * Basics
         ** <leader>pv -> Explore
     
     * Telescope
