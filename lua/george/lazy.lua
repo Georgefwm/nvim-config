@@ -17,10 +17,9 @@ require("lazy").setup({
     require("plugins.colorscheme"),
     require("plugins.treesitter"),
     require("plugins.telescope"),
-    require("plugins.lsp-zero"),
-    require("plugins.mason"),
+    require("plugins.lsp.mason"),
     require("plugins.cmp"),
-    require("plugins.lsp-config"),
+    require("plugins.lsp.lsp-config"),
     require("plugins.toggleterm"),
 })
 
