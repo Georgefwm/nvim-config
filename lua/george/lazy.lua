@@ -21,5 +21,6 @@ require("lazy").setup({
     require("plugins.cmp"),
     require("plugins.lsp.lsp-config"),
     require("plugins.toggleterm"),
+    require("plugins.lazygit"),
 })
 
