@@ -2,7 +2,14 @@ return { -- LSP Configuration & Plugins
 	"neovim/nvim-lspconfig",
 	dependencies = {
 		-- Automatically install LSPs and related tools to stdpath for Neovim
-		{ "williamboman/mason.nvim", config = true }, -- NOTE: Must be loaded before dependants
+		{
+			"williamboman/mason.nvim",
+			config = true,
+			opts = {
+				ui = { border = "single" },
+				PATH = "append",
+			},
+		}, -- NOTE: Must be loaded before dependants
 		"williamboman/mason-lspconfig.nvim",
 		"WhoIsSethDaniel/mason-tool-installer.nvim",
 
@@ -183,10 +190,10 @@ return { -- LSP Configuration & Plugins
 						completion = {
 							callSnippet = "Replace",
 						},
-                        diagnostics = {
-                            globals = { 'vim' },
-                            --disable = { 'missing-fields' }
-                        }
+						diagnostics = {
+							globals = { "vim" },
+							--disable = { 'missing-fields' }
+						},
 					},
 				},
 			},
@@ -205,6 +212,8 @@ return { -- LSP Configuration & Plugins
 		local ensure_installed = vim.tbl_keys(servers or {})
 		vim.list_extend(ensure_installed, {
 			"stylua", -- Used to format Lua code
+			"clangd",
+			"rust_analyzer",
 		})
 		require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
