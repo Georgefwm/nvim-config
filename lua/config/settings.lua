@@ -57,6 +57,8 @@ vim.opt.hlsearch = true
 -- Hide the tilda things on the left
 vim.opt.fillchars = { eob = " " }
 
+vim.opt.clipboard = "unnamedplus"
+
 -- misc
 vim.opt.nu = true
 vim.opt.termguicolors = true

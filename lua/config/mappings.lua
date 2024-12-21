@@ -30,3 +30,5 @@ vim.keymap.set("n", "<leader>w", "<cmd>w<CR>", { desc = "Write" })
 vim.keymap.set("n", "<leader>q", "<cmd>q<CR>", { desc = "Quit" })
 
 vim.keymap.set("n", "<leader>ft", "<cmd>TodoTelescope<CR>", { desc = "[f]ind [t]asks" })
+
+vim.keymap.set("n", "U", "<C-r>", { noremap = true })
