@@ -79,6 +79,9 @@ return { -- LSP Configuration & Plugins
                 --  For example, in C this would take you to the header.
                 map("gD", vim.lsp.buf.declaration, "[G]oto [D]eclaration")
 
+                -- format <- set in plugins/conform.lua
+                -- map("<leader>lf", vim.lsp.buf.format, "[l]sp [f]ormat")
+
                 -- The following two autocommands are used to highlight references of the
                 -- word under your cursor when your cursor rests there for a little while.
                 --    See `:help CursorHold` for information about when this is executed
@@ -107,6 +110,16 @@ return { -- LSP Configuration & Plugins
                         end,
                     })
                 end
+
+                -- if client and client.server_capabilities.documentFormattingProvider then
+                --     vim.cmd([[
+                --         augroup LspFormatting
+                --         autocmd! * <buffer>
+                --         autocmd BufWritePre <buffer> lua vim.lsp.buf.format()
+                --         augroup END
+                --     ]])
+                --     -- vim.cmd("au BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()")
+                -- end
             end,
         })
 
@@ -140,6 +153,9 @@ return { -- LSP Configuration & Plugins
             -- tsserver = {},
             --
 
+            -- cmake = {
+            --     filetypes = { "cmake", "CMakeLists.txt" }
+            -- },
             lua_ls = {
                 -- cmd = {...},
                 -- filetypes = { ...},
@@ -176,6 +192,7 @@ return { -- LSP Configuration & Plugins
         })
         require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
+        ---@diagnostic disable-next-line: missing-fields
         require("mason-lspconfig").setup({
             handlers = {
                 function(server_name)
