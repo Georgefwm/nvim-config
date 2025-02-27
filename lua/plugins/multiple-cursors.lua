@@ -1,15 +1,17 @@
 return {
     "brenton-leighton/multiple-cursors.nvim",
-    version = "v0.13",
-    event = "VimEnter",
+    version = "*",
+    dependencies = {
+        'nvimtools/hydra.nvim',
+    },   event = "VimEnter",
     opts = {
         custom_key_maps = {
             { "n", "<Leader>|", function() require("multiple-cursors").align() end },
         },
     },
     keys = {
-        { "<C-S-j>",   "<Cmd>MultipleCursorsAddDown<CR>",          mode = { "n", "x" }, desc = "Add cursor and move down" },
-        { "<C-S-k>",   "<Cmd>MultipleCursorsAddUp<CR>",            mode = { "n", "x" }, desc = "Add cursor and move up" },
+        { "<C-J>",   "<Cmd>MultipleCursorsAddDown<CR>",          mode = { "n", "x" }, desc = "Add cursor and move down" },
+        { "<C-K>",   "<Cmd>MultipleCursorsAddUp<CR>",            mode = { "n", "x" }, desc = "Add cursor and move up" },
 
         -- { "<C-Up>",        "<Cmd>MultipleCursorsAddUp<CR>",            mode = { "n", "i", "x" }, desc = "Add cursor and move up" },
         -- { "<C-Down>",      "<Cmd>MultipleCursorsAddDown<CR>",          mode = { "n", "i", "x" }, desc = "Add cursor and move down" },

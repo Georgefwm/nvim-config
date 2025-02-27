@@ -1,11 +1,11 @@
 -- Default tab width
-vim.opt.tabstop = 4
+vim.opt.tabstop     = 4
 vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.expandtab = true
-vim.opt.smartindent = true
+vim.opt.shiftwidth  = 4
+vim.opt.expandtab   = true
+vim.opt.smartindent = false
 -- Line numbers
-vim.opt.number = true
+vim.opt.number         = true
 vim.opt.relativenumber = true
 
 -- Enable mouse mode, can be useful for resizing splits
@@ -26,7 +26,7 @@ vim.opt.undofile = true
 
 -- Case-insensitive searching UNLESS \C or one or more capital letters in the search term
 vim.opt.ignorecase = true
-vim.opt.smartcase = true
+vim.opt.smartcase  = true
 
 -- Decrease update time
 vim.opt.updatetime = 750
@@ -60,10 +60,10 @@ vim.opt.fillchars = { eob = " " }
 vim.opt.clipboard = "unnamedplus"
 
 -- misc
-vim.opt.nu = true
+vim.opt.nu            = true
 vim.opt.termguicolors = true
-vim.opt.scrolloff = 8
-vim.opt.signcolumn = "yes"
-vim.opt.colorcolumn = "100"
-vim.opt.virtualedit = "onemore"
-vim.opt.guicursor = ""
+vim.opt.scrolloff     = 8
+vim.opt.signcolumn    = "yes"
+vim.opt.colorcolumn   = "100"
+vim.opt.virtualedit   = "onemore"
+vim.opt.guicursor     = ""
